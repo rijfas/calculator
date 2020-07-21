@@ -19,7 +19,7 @@ window.onload = (function (){
         case "+":
         case "-":
         case "*":
-        case "/":
+        case "÷":
             element.onclick = (
               function(opt){
                 return function(){
@@ -67,5 +67,5 @@ function operation(operator){
 }
 
 function calculate(expression){
-  input.value = eval(expression);
+  input.value = eval(expression.replace(/÷/g, '/'));
 }
